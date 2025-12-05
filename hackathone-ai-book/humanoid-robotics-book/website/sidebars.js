@@ -17,7 +17,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 1: The Robotic Nervous System (ROS 2)',
-      link: {type: 'doc', id: 'module1-ros2/intro'}, // Placeholder intro page
+      link: {type: 'doc', id: 'module1-ros2/chapter1'}, // Placeholder intro page
       items: [
         'module1-ros2/chapter1',
         'module1-ros2/chapter2',
@@ -29,7 +29,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 2: The Digital Twin (Gazebo & Unity)',
-      link: {type: 'doc', id: 'module2-gazebo/intro'}, // Placeholder intro page
+      link: {type: 'doc', id: 'module2-gazebo/chapter1'}, // Placeholder intro page
       items: [
         'module2-gazebo/chapter1',
         'module2-gazebo/chapter2',
@@ -41,7 +41,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 3: The AI-Robot Brain (NVIDIA Isaac)',
-      link: {type: 'doc', id: 'module3-isaac/intro'}, // Placeholder intro page
+      link: {type: 'doc', id: 'module3-isaac/chapter1'}, // Placeholder intro page
       items: [
         'module3-isaac/chapter1',
         'module3-isaac/chapter2',
@@ -53,7 +53,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 4: Vision-Language-Action (VLA)',
-      link: {type: 'doc', id: 'module4-vla/intro'}, // Placeholder intro page
+      link: {type: 'doc', id: 'module4-vla/chapter1'}, // Placeholder intro page
       items: [
         'module4-vla/chapter1',
         'module4-vla/chapter2',

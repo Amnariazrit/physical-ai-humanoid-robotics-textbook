@@ -22,7 +22,14 @@ const config = {
   projectName: 'physical-ai-humanoid-robotics-textbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    mermaid: true, // Assuming mermaid is desired, commonly used in tech docs
+    format: 'md',
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
