@@ -127,7 +127,7 @@ const config = {
             items: [
               {
                 label: 'Textbook',
-                to: '/docs/intro',
+                to: '/docs/module1-ros2/chapter1',
               },
             ],
           },
