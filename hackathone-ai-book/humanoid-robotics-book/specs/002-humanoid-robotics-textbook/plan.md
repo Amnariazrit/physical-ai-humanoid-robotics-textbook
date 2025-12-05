@@ -12,12 +12,19 @@ The project is to create a comprehensive, multi-module textbook on Physical AI a
 **Language/Version**: Python 3.10+
 **Primary Dependencies**: ROS 2 Humble (LTS), Ignition Gazebo Fortress (LTS), NVIDIA Isaac Sim (latest), Docusaurus v3.x. See `research.md` for details.
 **Storage**: Git repository / Markdown files.
-**Testing**: `pytest` for validation of Python code examples; manual validation for simulation and setup instructions.
+**Testing**: Adherence to "Test-First (NON-NEGOTIABLE)" principle. For all Python code examples, `pytest` will be used, with tests written *before* implementation. Simulation setups will have clear verification steps defined and executed manually.
 **Target Platform**: The textbook content is for users on a Linux environment (Ubuntu 22.04 recommended for ROS 2). The deployed website via Docusaurus will be platform-agnostic.
 **Project Type**: Single project (Docusaurus-based documentation).
 **Performance Goals**: N/A (Content-based project).
 **Constraints**: Users must have a computer with a compatible NVIDIA GPU to complete the modules involving NVIDIA Isaac Sim.
 **Scale/Scope**: 4 core modules, delivered as a Git repository of Markdown files.
+
+### Versioning Strategy
+
+Textbook content and code examples will follow Semantic Versioning (Major.Minor.Patch) to align with Constitution 6.2.
+- **Major**: Significant curriculum changes, new modules, or backward-incompatible changes to core concepts.
+- **Minor**: New chapters, major revisions to existing chapters, or significant updates to code examples.
+- **Patch**: Typo corrections, minor clarifications, small code fixes, or dependency version updates.
 
 ## Constitution Check
 
