@@ -112,11 +112,11 @@
 
 ### Implementation for Module 4
 
-- [ ] T028 [VLA] Develop Chapter 1 content (Voice-to-Action with Whisper) in `docs/module4-vla/chapter1.md`.
-- [ ] T029 [VLA] Develop Chapter 2 content (Cognitive Planning - LLM planning of sequences) in `docs/module4-vla/chapter2.md`.
-- [ ] T030 [VLA] Develop Chapter 3 content (ROS 2 Action Sequencing) and create example for executing planned actions.
-- [ ] T031 [VLA] Develop Chapter 4 content (Multi-modal Interaction) in `docs/module4-vla/chapter4.md`.
-- [ ] T032 [VLA] Develop Chapter 5 content (Capstone Integration - Autonomous humanoid demonstration).
+- [x] T028 [VLA] Develop Chapter 1 content (Voice-to-Action with Whisper) in `docs/module4-vla/chapter1.md`.
+- [x] T029 [VLA] Develop Chapter 2 content (Cognitive Planning - LLM planning of sequences) in `docs/module4-vla/chapter2.md`.
+- [x] T030 [VLA] Develop Chapter 3 content (ROS 2 Action Sequencing) and create example for executing planned actions.
+- [x] T031 [VLA] Develop Chapter 4 content (Multi-modal Interaction) in `docs/module4-vla/chapter4.md`.
+- [x] T032 [VLA] Develop Chapter 5 content (Capstone Integration - Autonomous humanoid demonstration).
 - [ ] T033 [Test] [VLA] Verify Module 4 VLA examples function as expected, translating commands to actions.
 
 ---
