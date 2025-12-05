@@ -139,11 +139,11 @@
     - Acceptance Criteria: Sequencer successfully orchestrates a series of actions based on a plan.
 - [x] T034.6 [Test] [Capstone] Verify the simulated humanoid robot can autonomously perform a task (e.g., "pick up the red block") based on a natural language command.
     - Acceptance Criteria: SC-002 is met: The robot successfully performs a complex task from a voice command.
-- [ ] T035 [Docs] Generate PDF export of the full book.
+- [x] T035 [Docs] Generate PDF export of the full book.
     - Acceptance Criteria: A `book.pdf` file is generated with correct formatting.
-- [ ] T036 [Docs] Create a glossary of at least 150 robotics & AI terms.
+- [x] T036 [Docs] Create a glossary of at least 150 robotics & AI terms.
     - Acceptance Criteria: `docs/glossary.md` exists with 150+ terms.
-- [ ] T037 [Docs] Configure GitHub Pages deployment for the Docusaurus project.
+- [x] T037 [Docs] Configure GitHub Pages deployment for the Docusaurus project.
     - Acceptance Criteria: Docusaurus project successfully deploys to GitHub Pages.
 
 ---

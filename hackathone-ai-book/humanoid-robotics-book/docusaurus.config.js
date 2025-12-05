@@ -11,15 +11,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://Amnariazrit.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/physical-ai-humanoid-robotics-textbook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Amnariazrit', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-humanoid-robotics-textbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -55,6 +55,34 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    // Hypothetical plugin for PDF generation.
+    // In a real scenario, you'd install a community plugin like '@docusaurus/plugin-content-docs-with-pdf'
+    // or set up a custom solution using tools like Puppeteer.
+    // For now, this serves as a conceptual placeholder.
+    [
+      './plugins/docusaurus-plugin-pdf', // Placeholder path to a custom local plugin or a community plugin
+      {
+        id: 'pdf-export',
+        docs: {
+          include: ['**/*.md', '!**/_*.md'], // Include all docs, exclude partials
+          exclude: [],
+        },
+        blog: {
+          include: ['**/*.md'],
+        },
+        outputDir: 'build/pdf', // Output directory for generated PDFs
+        downloadButtonLabel: 'Download PDF', // Label for the download button
+        // Optional: Customize PDF options (e.g., header, footer, page format)
+        // options: {
+        //   format: 'A4',
+        //   margin: { top: '50px', right: '50px', bottom: '50px', left: '50px' },
+        //   printBackground: true,
+        // }
+      },
     ],
   ],
 
