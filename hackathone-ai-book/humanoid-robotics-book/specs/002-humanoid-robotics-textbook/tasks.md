@@ -55,15 +55,15 @@
 
 ### Implementation for Module 1
 
-- [ ] T010 [ROS2] Develop Chapter 1 content (Introduction to ROS 2) in `docs/module1-ros2/chapter1.md`.
+- [x] T010 [ROS2] Develop Chapter 1 content (Introduction to ROS 2) in `docs/module1-ros2/chapter1.md`.
     - Acceptance Criteria: Content covers ROS 2 overview and architecture.
-- [ ] T011 [ROS2] Develop Chapter 2 content (ROS 2 Nodes and Topics) and create corresponding Python code example in `static/code-examples/module1/ch2_nodes_topics/`.
+- [x] T011 [ROS2] Develop Chapter 2 content (ROS 2 Nodes and Topics) and create corresponding Python code example in `static/code-examples/module1/ch2_nodes_topics/`.
     - Acceptance Criteria: Code demonstrates node-to-node communication.
-- [ ] T012 [ROS2] Develop Chapter 3 content (ROS 2 Services and Actions) and create corresponding Python code example in `static/code-examples/module1/ch3_services_actions/`.
+- [x] T012 [ROS2] Develop Chapter 3 content (ROS 2 Services and Actions) and create corresponding Python code example in `static/code-examples/module1/ch3_services_actions/`.
     - Acceptance Criteria: Code demonstrates synchronous and asynchronous calls.
-- [ ] T013 [ROS2] Develop Chapter 4 content (Python Integration) in `docs/module1-ros2/chapter4.md`.
+- [x] T013 [ROS2] Develop Chapter 4 content (Python Integration) in `docs/module1-ros2/chapter4.md`.
     - Acceptance Criteria: Content bridges Python agents to ROS 2.
-- [ ] T014 [ROS2] Develop Chapter 5 content (URDF for Humanoids) and create a generic humanoid URDF model file in `static/code-examples/module1/ch5_urdf/`.
+- [x] T014 [ROS2] Develop Chapter 5 content (URDF for Humanoids) and create a generic humanoid URDF model file in `static/code-examples/module1/ch5_urdf/`.
     - Acceptance Criteria: URDF file accurately describes a generic humanoid robot.
 - [ ] T015 [Test] [ROS2] Verify all Module 1 code examples are reproducible and function as expected in a clean ROS 2 Humble environment.
     - Acceptance Criteria: All code runs without errors and produces expected output.
