@@ -137,7 +137,7 @@
     - Acceptance Criteria: Action servers are functional and can execute basic simulated movements.
 - [x] T034.5 [Capstone] Integrate ROS 2 Action Sequencer to execute the LLM-generated plan on the simulated humanoid.
     - Acceptance Criteria: Sequencer successfully orchestrates a series of actions based on a plan.
-- [ ] T034.6 [Test] [Capstone] Verify the simulated humanoid robot can autonomously perform a task (e.g., "pick up the red block") based on a natural language command.
+- [x] T034.6 [Test] [Capstone] Verify the simulated humanoid robot can autonomously perform a task (e.g., "pick up the red block") based on a natural language command.
     - Acceptance Criteria: SC-002 is met: The robot successfully performs a complex task from a voice command.
 - [ ] T035 [Docs] Generate PDF export of the full book.
     - Acceptance Criteria: A `book.pdf` file is generated with correct formatting.
