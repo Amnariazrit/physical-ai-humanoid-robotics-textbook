@@ -44,7 +44,7 @@ export default function Home() {
             <p>
               Get ready for hands-on learning with practical examples and simulations that bridge the gap between theory and real-world application.
             </p>
-            {/* <img src="/img/humanoid-robot-hero.png" alt="Humanoid Robot" className={styles.heroImage} /> */}
+            <img src="/img/hero.png" alt="Humanoid Robot" className={styles.heroImage} />
           </div>
         </section>
       </main>
