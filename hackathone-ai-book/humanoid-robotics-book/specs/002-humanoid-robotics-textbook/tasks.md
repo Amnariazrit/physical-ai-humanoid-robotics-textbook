@@ -65,7 +65,7 @@
     - Acceptance Criteria: Content bridges Python agents to ROS 2.
 - [x] T014 [ROS2] Develop Chapter 5 content (URDF for Humanoids) and create a generic humanoid URDF model file in `static/code-examples/module1/ch5_urdf/`.
     - Acceptance Criteria: URDF file accurately describes a generic humanoid robot.
-- [ ] T015 [Test] [ROS2] Verify all Module 1 code examples are reproducible and function as expected in a clean ROS 2 Humble environment.
+- [x] T015 [Test] [ROS2] Verify all Module 1 code examples are reproducible and function as expected in a clean ROS 2 Humble environment.
     - Acceptance Criteria: All code runs without errors and produces expected output.
 
 ---
@@ -83,7 +83,7 @@
 - [x] T018 [Simulation] Develop Chapter 3 content (URDF and SDF Formats) and create a basic Gazebo SDF environment file in `static/code-examples/module2/ch3_sdf/`.
 - [x] T019 [Simulation] Develop Chapter 4 content (Unity Visualization - optional, focus on Gazebo for core) in `docs/module2-gazebo/chapter4.md`.
 - [x] T020 [Simulation] Develop Chapter 5 content (Sensor Simulation) and integrate LiDAR, camera, IMU models into the humanoid URDF and Gazebo environment.
-- [ ] T021 [Test] [Simulation] Verify all Module 2 Gazebo simulations launch correctly and sensor data is published.
+- [x] T021 [Test] [Simulation] Verify all Module 2 Gazebo simulations launch correctly and sensor data is published.
 
 ---
 
@@ -95,11 +95,11 @@
 
 ### Implementation for Module 3
 
-- [ ] T022 [Isaac] Develop Chapter 1 content (Isaac Sim Introduction) in `docs/module3-isaac/chapter1.md`.
-- [ ] T023 [Isaac] Develop Chapter 2 content (AI-powered Perception) in `docs/module3-isaac/chapter2.md`.
-- [ ] T024 [Isaac] Develop Chapter 3 content (Isaac ROS for SLAM and navigation) and create example with Isaac ROS for VSLAM.
-- [ ] T025 [Isaac] Develop Chapter 4 content (Reinforcement Learning for humanoid behavior) and create RL example in Isaac Sim.
-- [ ] T026 [Isaac] Develop Chapter 5 content (Sim-to-Real Transfer) in `docs/module3-isaac/chapter5.md`.
+- [x] T022 [Isaac] Develop Chapter 1 content (Isaac Sim Introduction) in `docs/module3-isaac/chapter1.md`.
+- [x] T023 [Isaac] Develop Chapter 2 content (AI-powered Perception) in `docs/module3-isaac/chapter2.md`.
+- [x] T024 [Isaac] Develop Chapter 3 content (Isaac ROS for SLAM and navigation) and create example with Isaac ROS for VSLAM.
+- [x] T025 [Isaac] Develop Chapter 4 content (Reinforcement Learning for humanoid behavior) and create RL example in Isaac Sim.
+- [x] T026 [Isaac] Develop Chapter 5 content (Sim-to-Real Transfer) in `docs/module3-isaac/chapter5.md`.
 - [ ] T027 [Test] [Isaac] Verify Module 3 Isaac Sim examples run and demonstrate expected AI/robot behaviors.
 
 ---
