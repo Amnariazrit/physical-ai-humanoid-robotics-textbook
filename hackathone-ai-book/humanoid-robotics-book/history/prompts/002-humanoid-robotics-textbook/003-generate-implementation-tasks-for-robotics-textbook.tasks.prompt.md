@@ -24,7 +24,8 @@ tests:
 
 ## Prompt
 
-System: Please continue.
+System: Proceed according to the workflow and perform the next appropriate action.
+
 
 ## Response snapshot
 
