@@ -1,36 +1,70 @@
-# Sensor Simulation: LiDAR, Depth Camera, IMU
+<?xml version="1.0"?>
+<robot name="generic_humanoid" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-Robots perceive their environment through a variety of sensors. For effective simulation, these sensors must be accurately modeled in the virtual world. Gazebo provides extensive capabilities for simulating common robotic sensors, allowing you to test perception algorithms and validate control strategies without requiring physical hardware. This chapter will guide you through integrating essential sensor models – LiDAR, depth camera, and IMU – into your humanoid robot's URDF description and configuring them for use within Gazebo.
+  <!-- Define common properties/macros -->
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+  <xacro:property name="body_mass" value="1.0" />
+  <xacro:property name="body_len" value="0.2" />
+  <xacro:property name="body_rad" value="0.05" />
 
-## Understanding Sensor Models in URDF/SDF
+  <!-- Macro for a generic cylinder link with inertia -->
+  <xacro:macro name="cylinder_link" params="name mass length radius">
+    <link name="${name}">
+      <visual>
+        <geometry>
+          <cylinder length="${length}" radius="${radius}"/>
+        </geometry>
+        <material name="blue">
+          <color rgba="0 0 0.8 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="${length}" radius="${radius}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="${mass}"/>
+        <inertia ixx="${(1/12)*mass*(3*radius*radius + length*length)}" ixy="0.0" ixz="0.0"
+                 iyy="${(1/12)*mass*(3*radius*radius + length*length)}" iyz="0.0"
+                 izz="${(1/2)*mass*radius*radius}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
 
-While basic sensor definitions can sometimes be part of URDF, for full fidelity and Gazebo-specific parameters (like noise, update rates, and visualization), sensors are primarily defined using Gazebo plugins within an SDF context. When working with URDF, Gazebo translates URDF `<gazebo>` tags (which contain SDF snippets) into its internal SDF representation.
+  <!-- Base Link: Torso -->
+  <xacro:cylinder_link name="torso_link" mass="${body_mass}" length="${body_len}" radius="${body_rad}"/>
 
-### Common Sensor Types
+  <!-- Head Joint and Link -->
+  <joint name="head_joint" type="revolute">
+    <parent link="torso_link"/>
+    <child link="head_link"/>
+    <origin xyz="0 0 ${body_len/2 + body_len/4}" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${-M_PI/4}" upper="${M_PI/4}" effort="10.0" velocity="1.0"/>
+  </joint>
+  <xacro:cylinder_link name="head_link" mass="${body_mass/4}" length="${body_len/2}" radius="${body_rad/2}"/>
 
-1.  **LiDAR (Light Detection and Ranging)**: Used for measuring distances to objects and creating 2D or 3D maps of the environment. In Gazebo, LiDARs are often simulated as `ray` sensors.
-2.  **Depth Camera**: Provides both color (RGB) images and depth information, crucial for 3D perception, object detection, and navigation. Simulated as `camera` sensors with depth capabilities.
-3.  **IMU (Inertial Measurement Unit)**: Measures orientation, angular velocity, and linear acceleration. Essential for robot localization, balancing, and control. Simulated as `imu` sensors.
+  <!-- Right Shoulder Joint and Link -->
+  <joint name="right_shoulder_joint" type="revolute">
+    <parent link="torso_link"/>
+    <child link="right_upper_arm_link"/>
+    <origin xyz="0 ${-(body_rad + body_len/4)} 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="${-M_PI/2}" upper="${M_PI/2}" effort="10.0" velocity="1.0"/>
+  </joint>
+  <xacro:cylinder_link name="right_upper_arm_link" mass="${body_mass/4}" length="${body_len}" radius="${body_rad/3}"/>
 
-## Integrating Sensors into the Humanoid URDF (Xacro)
+  <!-- Right Elbow Joint and Link -->
+  <joint name="right_elbow_joint" type="revolute">
+    <parent link="right_upper_arm_link"/>
+    <child link="right_forearm_link"/>
+    <origin xyz="0 0 ${-body_len/2}" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="${-M_PI/2}" upper="${0}" effort="10.0" velocity="1.0"/>
+  </joint>
+  <xacro:cylinder_link name="right_forearm_link" mass="${body_mass/6}" length="${body_len}" radius="${body_rad/4}"/>
 
-We will enhance our `generic_humanoid.urdf.xacro` model to include these sensors. This involves adding new links for the sensors, defining their joints to the robot's body, and incorporating Gazebo-specific sensor definitions using `<gazebo>` tags within the Xacro file.
-
-**Key considerations when adding sensors:**
-
-*   **Placement**: Sensible placement on the robot model (e.g., camera on the head, LiDAR on the torso).
-*   **Sensor Link**: Each sensor typically has its own `<link>` in the URDF, which makes its pose and parent-child relationship explicit.
-*   **Gazebo Plugins**: The core of sensor simulation in Gazebo is done via plugins. These are specified within `<gazebo>` tags.
-
-### Example: Adding Sensors to `generic_humanoid.urdf.xacro`
-
-We'll add a head-mounted depth camera, a torso-mounted 2D LiDAR, and an IMU within the torso.
-
-**1. Depth Camera (on Head Link)**
-
-Add a new `camera_link` and `camera_joint` to the Xacro file, attached to the `head_link`. Then, define a Gazebo camera sensor plugin.
-
-```xml
   <!-- Depth Camera Joint and Link -->
   <joint name="camera_joint" type="fixed">
     <parent link="head_link"/>
@@ -83,13 +117,7 @@ Add a new `camera_link` and `camera_joint` to the Xacro file, attached to the `h
       </plugin>
     </sensor>
   </gazebo>
-```
 
-**2. 2D LiDAR (on Torso Link)**
-
-Add a `laser_link` and `laser_joint` to the `torso_link`. Define a Gazebo ray sensor plugin.
-
-```xml
   <!-- LiDAR Joint and Link -->
   <joint name="laser_joint" type="fixed">
     <parent link="torso_link"/>
@@ -143,13 +171,7 @@ Add a `laser_link` and `laser_joint` to the `torso_link`. Define a Gazebo ray se
       </plugin>
     </sensor>
   </gazebo>
-```
 
-**3. IMU (within Torso Link)**
-
-The IMU is usually embedded directly within a link (e.g., the base link or torso link) and doesn't always require a separate visual link.
-
-```xml
   <!-- Gazebo IMU Sensor (reference torso_link) -->
   <gazebo reference="torso_link">
     <sensor name="imu_sensor" type="imu">
