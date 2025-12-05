@@ -78,11 +78,11 @@
 
 ### Implementation for Module 2
 
-- [ ] T016 [Simulation] Develop Chapter 1 content (Gazebo Basics) in `docs/module2-gazebo/chapter1.md`.
-- [ ] T017 [Simulation] Develop Chapter 2 content (Physics Simulation) in `docs/module2-gazebo/chapter2.md`.
-- [ ] T018 [Simulation] Develop Chapter 3 content (URDF and SDF Formats) and create a basic Gazebo SDF environment file in `static/code-examples/module2/ch3_sdf/`.
-- [ ] T019 [Simulation] Develop Chapter 4 content (Unity Visualization - optional, focus on Gazebo for core) in `docs/module2-gazebo/chapter4.md`.
-- [ ] T020 [Simulation] Develop Chapter 5 content (Sensor Simulation) and integrate LiDAR, camera, IMU models into the humanoid URDF and Gazebo environment.
+- [x] T016 [Simulation] Develop Chapter 1 content (Gazebo Basics) in `docs/module2-gazebo/chapter1.md`.
+- [x] T017 [Simulation] Develop Chapter 2 content (Physics Simulation) in `docs/module2-gazebo/chapter2.md`.
+- [x] T018 [Simulation] Develop Chapter 3 content (URDF and SDF Formats) and create a basic Gazebo SDF environment file in `static/code-examples/module2/ch3_sdf/`.
+- [x] T019 [Simulation] Develop Chapter 4 content (Unity Visualization - optional, focus on Gazebo for core) in `docs/module2-gazebo/chapter4.md`.
+- [x] T020 [Simulation] Develop Chapter 5 content (Sensor Simulation) and integrate LiDAR, camera, IMU models into the humanoid URDF and Gazebo environment.
 - [ ] T021 [Test] [Simulation] Verify all Module 2 Gazebo simulations launch correctly and sensor data is published.
 
 ---
