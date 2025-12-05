@@ -1,0 +1,16 @@
+# Node.js / Docusaurus
+node_modules/
+build/
+.docusaurus/
+.cache/
+*.log
+.env
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/

@@ -19,15 +19,15 @@
 
 **Purpose**: Establish the foundational project structure and Docusaurus environment.
 
-- [ ] T001 [P] [Setup] Initialize Docusaurus v3 project in the repository root.
+- [x] T001 [P] [Setup] Initialize Docusaurus v3 project in the repository root.
     - Acceptance Criteria: `docusaurus.config.js`, `blog/`, `docs/`, `src/`, `static/` directories exist and are configured for the textbook project.
-- [ ] T002 [Setup] Configure Docusaurus `sidebars.js` for initial module structure (4 modules, placeholder chapters).
+- [x] T002 [Setup] Configure Docusaurus `sidebars.js` for initial module structure (4 modules, placeholder chapters).
     - Acceptance Criteria: `sidebars.js` reflects the 4 main modules (`module1-ros2`, `module2-gazebo`, `module3-isaac`, `module4-vla`).
-- [ ] T003 [P] [Setup] Configure `.gitignore` to exclude Docusaurus build outputs (`build/`, `node_modules/`) and environment-specific files.
+- [x] T003 [P] [Setup] Configure `.gitignore` to exclude Docusaurus build outputs (`build/`, `node_modules/`) and environment-specific files.
     - Acceptance Criteria: `git status` shows no untracked Docusaurus build artifacts.
-- [ ] T004 [P] [Setup] Create `static/code-examples/` directory for code examples, mirroring module structure.
+- [x] T004 [P] [Setup] Create `static/code-examples/` directory for code examples, mirroring module structure.
     - Acceptance Criteria: `static/code-examples/module1`, `module2`, `module3`, `module4` directories exist.
-- [ ] T005 [P] [Setup] Create `static/img/` directory for diagrams and images.
+- [x] T005 [P] [Setup] Create `static/img/` directory for diagrams and images.
     - Acceptance Criteria: `static/img/` directory exists.
 
 ---
@@ -36,13 +36,13 @@
 
 **Purpose**: Define content structure and establish writing standards based on the constitution.
 
-- [ ] T006 [Docs] Create placeholder Markdown files for all 4 modules and their respective 5 chapters in `docs/`.
+- [x] T006 [Docs] Create placeholder Markdown files for all 4 modules and their respective 5 chapters in `docs/`.
     - Acceptance Criteria: `docs/moduleX/chapterY.md` files exist for X={1-4}, Y={1-5}.
-- [ ] T007 [Docs] Review and integrate "SOURCE & CITATION RULES" from `constitution.md` into a "Writing Guidelines" document.
+- [x] T007 [Docs] Review and integrate "SOURCE & CITATION RULES" from `constitution.md` into a "Writing Guidelines" document.
     - Acceptance Criteria: `docs/writing-guidelines.md` exists with clear rules on citations, source types, and plagiarism.
-- [ ] T008 [Docs] Review and integrate "TEXTBOOK CONTENT REQUIREMENTS" from `constitution.md` (Chapter Structure, Word Count) into "Writing Guidelines".
+- [x] T008 [Docs] Review and integrate "TEXTBOOK CONTENT REQUIREMENTS" from `constitution.md` (Chapter Structure, Word Count) into "Writing Guidelines".
     - Acceptance Criteria: `docs/writing-guidelines.md` includes chapter structure and word count requirements.
-- [ ] T009 [Docs] Review and integrate "STYLE & FORMATTING RULES" from `constitution.md` (Markdown, Figures & Tables, Tone) into "Writing Guidelines".
+- [x] T009 [Docs] Review and integrate "STYLE & FORMATTING RULES" from `constitution.md` (Markdown, Figures & Tables, Tone) into "Writing Guidelines".
     - Acceptance Criteria: `docs/writing-guidelines.md` includes style and formatting rules.
 
 ---
