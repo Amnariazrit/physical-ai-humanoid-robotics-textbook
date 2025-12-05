@@ -127,15 +127,15 @@
 
 - [ ] T034 [Capstone] Develop Capstone Project content and integration in `docs/module4-vla/chapter5.md`.
     - Acceptance Criteria: `docs/module4-vla/chapter5.md` contains a blueprint for integrating all modules.
-- [ ] T034.1 [Capstone] Implement ROS 2 voice command node (using Whisper) to process natural language instructions.
+- [x] T034.1 [Capstone] Implement ROS 2 voice command node (using Whisper) to process natural language instructions.
     - Acceptance Criteria: Node correctly transcribes voice commands and outputs text on a ROS 2 topic.
-- [ ] T034.2 [Capstone] Implement perception node to identify objects and humanoid pose in the simulated environment.
+- [x] T034.2 [Capstone] Implement perception node to identify objects and humanoid pose in the simulated environment.
     - Acceptance Criteria: Node correctly detects and localizes objects and human gestures, publishing relevant data on ROS 2 topics.
-- [ ] T034.3 [Capstone] Implement LLM planner interface to receive text commands and perception data, generating action sequences.
+- [x] T034.3 [Capstone] Implement LLM planner interface to receive text commands and perception data, generating action sequences.
     - Acceptance Criteria: Interface translates high-level commands into a series of robot skills.
-- [ ] T034.4 [Capstone] Implement ROS 2 Action Servers for core robot skills (e.g., `MoveToLocation`, `GraspObject`, `OpenDoor`).
+- [x] T034.4 [Capstone] Implement ROS 2 Action Servers for core robot skills (e.g., `MoveToLocation`, `GraspObject`, `OpenDoor`).
     - Acceptance Criteria: Action servers are functional and can execute basic simulated movements.
-- [ ] T034.5 [Capstone] Integrate ROS 2 Action Sequencer to execute the LLM-generated plan on the simulated humanoid.
+- [x] T034.5 [Capstone] Integrate ROS 2 Action Sequencer to execute the LLM-generated plan on the simulated humanoid.
     - Acceptance Criteria: Sequencer successfully orchestrates a series of actions based on a plan.
 - [ ] T034.6 [Test] [Capstone] Verify the simulated humanoid robot can autonomously perform a task (e.g., "pick up the red block") based on a natural language command.
     - Acceptance Criteria: SC-002 is met: The robot successfully performs a complex task from a voice command.

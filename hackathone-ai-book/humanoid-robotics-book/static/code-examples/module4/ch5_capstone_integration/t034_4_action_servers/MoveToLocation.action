@@ -1,0 +1,8 @@
+# Goal
+string location_name
+---
+# Result
+bool success
+---
+# Feedback
+string current_status
