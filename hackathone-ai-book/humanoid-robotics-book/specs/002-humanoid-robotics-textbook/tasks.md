@@ -100,7 +100,7 @@
 - [x] T024 [Isaac] Develop Chapter 3 content (Isaac ROS for SLAM and navigation) and create example with Isaac ROS for VSLAM.
 - [x] T025 [Isaac] Develop Chapter 4 content (Reinforcement Learning for humanoid behavior) and create RL example in Isaac Sim.
 - [x] T026 [Isaac] Develop Chapter 5 content (Sim-to-Real Transfer) in `docs/module3-isaac/chapter5.md`.
-- [ ] T027 [Test] [Isaac] Verify Module 3 Isaac Sim examples run and demonstrate expected AI/robot behaviors.
+- [x] T027 [Test] [Isaac] Verify Module 3 Isaac Sim examples run and demonstrate expected AI/robot behaviors.
 
 ---
 
@@ -117,7 +117,7 @@
 - [x] T030 [VLA] Develop Chapter 3 content (ROS 2 Action Sequencing) and create example for executing planned actions.
 - [x] T031 [VLA] Develop Chapter 4 content (Multi-modal Interaction) in `docs/module4-vla/chapter4.md`.
 - [x] T032 [VLA] Develop Chapter 5 content (Capstone Integration - Autonomous humanoid demonstration).
-- [ ] T033 [Test] [VLA] Verify Module 4 VLA examples function as expected, translating commands to actions.
+- [x] T033 [Test] [VLA] Verify Module 4 VLA examples function as expected, translating commands to actions.
 
 ---
 
